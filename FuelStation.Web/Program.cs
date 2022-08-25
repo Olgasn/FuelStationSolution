@@ -5,8 +5,8 @@ using FuelStation.Application;
 using FuelStation.Application.Common.Mappings;
 using FuelStation.Application.Interfaces;
 using System.Reflection;
-using FuelStation.WebApi.Middleware;
 using Microsoft.OpenApi.Models;
+using FuelStation.Web.Middleware;
 
 // Запись действий в журнал
 Log.Logger = new LoggerConfiguration()
@@ -56,7 +56,7 @@ services.AddSwaggerGen(c =>
         {
             Name = "Asenchik Oleg",
             Email = string.Empty,
-            Url = new Uri("https://github.com/Olgasn/FuelStationWebApi")
+            Url = new Uri("https://github.com/Olgasn/FuelStationSolution")
         }
     });
 

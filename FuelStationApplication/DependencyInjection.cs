@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using FluentValidation;
-using FuelStation.Application.Common.Behaviors;
+using FuelStation.Application.Behaviors;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 

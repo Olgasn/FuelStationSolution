@@ -3,7 +3,7 @@ using System.Text.Json;
 using FluentValidation;
 using FuelStation.Application.Common.Exceptions;
 
-namespace FuelStation.WebApi.Middleware
+namespace FuelStation.Web.Middleware
 {
     public class CustomExceptionHandlerMiddleware
     {
@@ -18,7 +18,7 @@ namespace FuelStation.WebApi.Middleware
             {
                 await _next(context);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 await HandleExceptionAsync(context, exception);
             }
@@ -28,7 +28,7 @@ namespace FuelStation.WebApi.Middleware
         {
             var code = HttpStatusCode.InternalServerError;
             var result = string.Empty;
-            switch(exception)
+            switch (exception)
             {
                 case ValidationException validationException:
                     code = HttpStatusCode.BadRequest;

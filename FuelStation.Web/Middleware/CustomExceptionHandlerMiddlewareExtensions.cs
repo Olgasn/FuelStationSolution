@@ -1,4 +1,4 @@
-﻿namespace FuelStation.WebApi.Middleware
+﻿namespace FuelStation.Web.Middleware
 {
     public static class CustomExceptionHandlerMiddlewareExtensions
     {

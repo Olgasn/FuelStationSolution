@@ -4,7 +4,7 @@ using FuelStation.Persistence;
 using FuelStation.Tests.Common;
 using Shouldly;
 
-namespace FuelStation.Tests.Notes.Queries
+namespace FuelStation.Tests.Tanks.Queries
 {
     [Collection("QueryCollection")]
     public class GetTankListQueryHandlerTests
