@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FuelStationDomain\FuelStation.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\CreateFuel\" />
+    <Folder Include="Commands\DeleteFuel\" />
+    <Folder Include="Commands\UpdateFuel\" />
+    <Folder Include="Commands\CreateOperation\" />
+    <Folder Include="Commands\DeleteOperation\" />
+    <Folder Include="Commands\UpdateOperation\" />
+  </ItemGroup>
+
+</Project>
