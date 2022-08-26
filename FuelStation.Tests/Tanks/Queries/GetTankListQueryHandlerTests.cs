@@ -34,7 +34,7 @@ namespace FuelStation.Tests.Tanks.Queries
 
             // Assert
             result.ShouldBeOfType<TankListVm>();
-            result.Tanks.Count.ShouldBe(FuelStationContextFactory.tanks_number);
+            result.Tanks.Count.ShouldBe(FuelStationContextFactory.tanksNumber);
         }
     }
 }

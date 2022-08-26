@@ -51,7 +51,6 @@ services.AddSwaggerGen(c =>
         Version = "v1",
         Title = "FuelStation API",
         Description = "Данные об операциях на топливной базе",
-        //TermsOfService = new Uri("https://go.microsoft.com/fwlink/?LinkID=206977"),
         Contact = new OpenApiContact
         {
             Name = "Asenchik Oleg",
