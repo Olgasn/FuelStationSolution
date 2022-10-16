@@ -29,7 +29,7 @@ namespace FuelStation.Tests.Operations.Queries
                 new GetOperationListQuery
                 {
                     TankType = "",
-                    FuelType=""
+                    FuelType = ""
                 },
                 CancellationToken.None);
 

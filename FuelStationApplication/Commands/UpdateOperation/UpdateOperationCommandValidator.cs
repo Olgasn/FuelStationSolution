@@ -8,7 +8,7 @@ namespace FuelStation.Application.Commands.UpdateOperation
         {
             RuleFor(updateCommand =>
                 updateCommand.Inc_Exp).NotEmpty();
-            RuleFor(updateCommand=>
+            RuleFor(updateCommand =>
                 updateCommand.Id).NotEqual(Guid.Empty);
         }
     }

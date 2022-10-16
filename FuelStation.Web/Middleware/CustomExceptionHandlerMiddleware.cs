@@ -1,7 +1,7 @@
-﻿using System.Net;
-using System.Text.Json;
-using FluentValidation;
+﻿using FluentValidation;
 using FuelStation.Application.Common.Exceptions;
+using System.Net;
+using System.Text.Json;
 
 namespace FuelStation.Web.Middleware
 {

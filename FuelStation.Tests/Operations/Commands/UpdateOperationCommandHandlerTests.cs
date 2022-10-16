@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FuelStation.Application.Commands.UpdateOperation;
 using FuelStation.Application.Common.Exceptions;
-using FuelStation.Application.Commands.UpdateOperation;
 using FuelStation.Tests.Common;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace FuelStation.Tests.Operations.Commands
@@ -14,14 +14,14 @@ namespace FuelStation.Tests.Operations.Commands
             // Arrange
             var handler = new UpdateOperationCommandHandler(Context);
             float updatedInc_Exp = -23.4f;
-            var updatedOperationDate= new DateTime(2015, 7, 20);
+            var updatedOperationDate = new DateTime(2015, 7, 20);
 
             // Act
             await handler.Handle(new UpdateOperationCommand
             {
                 Id = FuelStationContextFactory.IdForUpdate,
                 Inc_Exp = updatedInc_Exp,
-                OperationDate=updatedOperationDate
+                OperationDate = updatedOperationDate
             }, CancellationToken.None);
 
             // Assert

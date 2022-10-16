@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using FuelStation.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using FuelStation.Application.Interfaces;
 
 namespace FuelStation.Application.Queries.GetList
 {

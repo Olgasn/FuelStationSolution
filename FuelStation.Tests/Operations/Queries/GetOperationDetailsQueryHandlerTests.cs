@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using FuelStation.Application.Queries.GetDetails;
-using FuelStation.Domain;
 using FuelStation.Persistence;
 using FuelStation.Tests.Common;
 using Shouldly;

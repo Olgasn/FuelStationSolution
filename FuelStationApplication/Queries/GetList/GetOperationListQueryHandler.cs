@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using FuelStation.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using FuelStation.Application.Interfaces;
 
 namespace FuelStation.Application.Queries.GetList
 {
@@ -20,7 +20,7 @@ namespace FuelStation.Application.Queries.GetList
             CancellationToken cancellationToken)
         {
             var operationsQuery = await _dbContext.Operations
-                .Include(t=>t.Tank)
+                .Include(t => t.Tank)
                 .Where(op => op.Tank.TankType.Contains(request.TankType ?? ""))
                 .Include(f => f.Fuel)
                 .Where(op => op.Fuel.FuelType.Contains(request.FuelType ?? ""))

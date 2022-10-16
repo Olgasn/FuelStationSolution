@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using FuelStation.Application.Queries.GetList;
-using FuelStation.Application.Queries.GetDetails;
 using FuelStation.Application.Commands.CreateTank;
-using FuelStation.Application.Commands.UpdateTank;
 using FuelStation.Application.Commands.DeleteTank;
+using FuelStation.Application.Commands.UpdateTank;
+using FuelStation.Application.Queries.GetDetails;
+using FuelStation.Application.Queries.GetList;
 using FuelStation.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FuelStation.Web.Controllers
 {

@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using FuelStation.Application.Commands.CreateTank;
+﻿using FuelStation.Application.Commands.CreateTank;
 using FuelStation.Tests.Common;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace FuelStation.Tests.Tanks.Commands

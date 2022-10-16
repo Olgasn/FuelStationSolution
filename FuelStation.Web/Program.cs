@@ -1,12 +1,12 @@
-using FuelStation.Persistence;
-using Serilog;
-using Serilog.Events;
 using FuelStation.Application;
 using FuelStation.Application.Common.Mappings;
 using FuelStation.Application.Interfaces;
-using System.Reflection;
-using Microsoft.OpenApi.Models;
+using FuelStation.Persistence;
 using FuelStation.Web.Middleware;
+using Microsoft.OpenApi.Models;
+using Serilog;
+using Serilog.Events;
+using System.Reflection;
 
 // Запись действий в журнал
 Log.Logger = new LoggerConfiguration()

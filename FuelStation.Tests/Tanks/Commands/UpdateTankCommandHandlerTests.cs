@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FuelStation.Application.Commands.UpdateTank;
 using FuelStation.Application.Common.Exceptions;
-using FuelStation.Application.Commands.UpdateTank;
 using FuelStation.Tests.Common;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace FuelStation.Tests.Tanks.Commands

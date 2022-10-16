@@ -21,7 +21,7 @@ namespace FuelStation.Application.Commands.UpdateTank
                 await _dbContext.Tanks.FirstOrDefaultAsync(tank =>
                     tank.Id == request.Id, cancellationToken);
 
-            if (entity == null || request.TankType ==null)
+            if (entity == null || request.TankType == null)
             {
                 throw new NotFoundException(nameof(Tank), request.Id);
             }

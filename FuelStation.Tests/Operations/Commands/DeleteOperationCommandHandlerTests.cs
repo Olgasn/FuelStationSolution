@@ -1,5 +1,5 @@
-﻿using FuelStation.Application.Common.Exceptions;
-using FuelStation.Application.Commands.DeleteOperation;
+﻿using FuelStation.Application.Commands.DeleteOperation;
+using FuelStation.Application.Common.Exceptions;
 using FuelStation.Tests.Common;
 
 namespace FuelStation.Tests.Operations.Commands

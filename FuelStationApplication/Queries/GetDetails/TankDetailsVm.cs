@@ -6,7 +6,7 @@ namespace FuelStation.Application.Queries.GetDetails
 {
     public class TankDetailsVm : IMapWith<Tank>
     {
-         //ID емкости
+        //ID емкости
         public Guid Id { get; set; }
         //Тип емкости
         public string TankType { get; set; } = null!;
@@ -32,7 +32,7 @@ namespace FuelStation.Application.Queries.GetDetails
                     opt => opt.MapFrom(tank => tank.TankWeight))
                 .ForMember(tankVm => tankVm.TankVolume,
                     opt => opt.MapFrom(tank => tank.TankVolume))
-                .ForMember(tankVm=>tankVm.TankPicture,
+                .ForMember(tankVm => tankVm.TankPicture,
                     opt => opt.MapFrom(tank => tank.TankPicture));
         }
     }

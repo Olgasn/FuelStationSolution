@@ -21,7 +21,7 @@ namespace FuelStation.Application.Commands.UpdateOperation
                 await _dbContext.Operations.FirstOrDefaultAsync(operation =>
                     operation.Id == request.Id, cancellationToken);
 
-            if (entity == null || request.Inc_Exp ==null)
+            if (entity == null || request.Inc_Exp == null)
             {
                 throw new NotFoundException(nameof(Operation), request.Id);
             }

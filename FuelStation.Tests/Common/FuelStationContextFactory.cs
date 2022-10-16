@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using FuelStation.Domain;
+﻿using FuelStation.Domain;
 using FuelStation.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace FuelStation.Tests.Common
 {
@@ -36,7 +36,7 @@ namespace FuelStation.Tests.Common
             string[] materialDictionary = { "Сталь", "Платина", "Алюминий", "ПЭТ", "Чугун", "Алюминий", "Сталь" };//словарь названий видов топлива
             int count_tankDictionary = tankDictionary.GetLength(0);
             int count_materialDictionary = materialDictionary.GetLength(0);
-            for (int tankId = 1; tankId <= tanksNumber-1; tankId++)
+            for (int tankId = 1; tankId <= tanksNumber - 1; tankId++)
             {
                 tanksId[tankId - 1] = tankId switch
                 {
@@ -48,14 +48,14 @@ namespace FuelStation.Tests.Common
                 tankMaterial = materialDictionary[randObj.Next(count_materialDictionary)];
                 tankWeight = 500 * (float)randObj.NextDouble();
                 tankVolume = 200 * (float)randObj.NextDouble();
-                context.Tanks.Add(new Tank 
-                    { 
-                        Id = tanksId[tankId - 1], 
-                        TankType = tankType, 
-                        TankWeight = tankWeight, 
-                        TankVolume = tankVolume, 
-                        TankMaterial = tankMaterial 
-                    });
+                context.Tanks.Add(new Tank
+                {
+                    Id = tanksId[tankId - 1],
+                    TankType = tankType,
+                    TankWeight = tankWeight,
+                    TankVolume = tankVolume,
+                    TankMaterial = tankMaterial
+                });
             }
             //Дополнительная запись для тестирование единичной выборки
             context.Tanks.Add(new Tank
@@ -82,11 +82,11 @@ namespace FuelStation.Tests.Common
                 };
                 fuelType = fuelDictionary[randObj.Next(count_fuelDictionary)] + fuelId.ToString();
                 fuelDensity = 2 * (float)randObj.NextDouble();
-                context.Fuels.Add(new Fuel 
-                { 
-                    Id = fuelsId[fuelId - 1], 
-                    FuelType = fuelType, 
-                    FuelDensity = fuelDensity 
+                context.Fuels.Add(new Fuel
+                {
+                    Id = fuelsId[fuelId - 1],
+                    FuelType = fuelType,
+                    FuelDensity = fuelDensity
                 });
             }
             //Дополнительная запись для тестирование единичной выборки
@@ -113,13 +113,13 @@ namespace FuelStation.Tests.Common
                 int inc_exp = randObj.Next(200) - 100;
                 DateTime today = DateTime.Now.Date;
                 DateTime operationDate = today.AddDays(-operationId);
-                context.Operations.Add(new Operation 
-                { 
-                    Id = Id, 
-                    TankId = tankId, 
-                    FuelId = fuelId, 
-                    Inc_Exp = inc_exp, 
-                    OperationDate = operationDate 
+                context.Operations.Add(new Operation
+                {
+                    Id = Id,
+                    TankId = tankId,
+                    FuelId = fuelId,
+                    Inc_Exp = inc_exp,
+                    OperationDate = operationDate
                 });
             }
             //Дополнительная запись для тестирование единичной выборки

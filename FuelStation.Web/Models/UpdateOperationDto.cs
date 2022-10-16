@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
-using FuelStation.Application.Common.Mappings;
 using FuelStation.Application.Commands.UpdateOperation;
-using System.ComponentModel.DataAnnotations;
-using FuelStation.Domain;
+using FuelStation.Application.Common.Mappings;
 
 namespace FuelStation.Web.Models
 {

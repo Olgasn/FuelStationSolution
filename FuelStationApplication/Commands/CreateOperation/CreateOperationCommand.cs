@@ -2,7 +2,7 @@
 
 namespace FuelStation.Application.Commands.CreateOperation
 {
-    public class CreateOperationCommand:IRequest<Guid>
+    public class CreateOperationCommand : IRequest<Guid>
     {
         //Id операции
         public Guid Id { get; set; }

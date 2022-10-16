@@ -8,7 +8,7 @@ namespace FuelStation.Application.Commands.UpdateTank
         {
             RuleFor(updateCommand =>
                 updateCommand.TankType).NotEmpty().MaximumLength(35);
-            RuleFor(updateCommand=>
+            RuleFor(updateCommand =>
                 updateCommand.Id).NotEqual(Guid.Empty);
         }
     }

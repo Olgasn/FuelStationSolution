@@ -22,7 +22,7 @@ namespace FuelStation.Application.Commands.CreateTank
                 TankMaterial = request.TankMaterial,
                 TankVolume = request.TankVolume,
                 TankWeight = request.TankWeight,
-                TankPicture=request.TankPicture
+                TankPicture = request.TankPicture
             };
 
             await _dbContext.Tanks.AddAsync(tank, cancellationToken);

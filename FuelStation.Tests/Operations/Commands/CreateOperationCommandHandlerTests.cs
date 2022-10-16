@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using FuelStation.Application.Commands.CreateOperation;
+﻿using FuelStation.Application.Commands.CreateOperation;
 using FuelStation.Tests.Common;
+using Microsoft.EntityFrameworkCore;
 
 namespace FuelStation.Tests.Operations.Commands
 {
@@ -34,7 +34,7 @@ namespace FuelStation.Tests.Operations.Commands
             Assert.NotNull(
                 await Context.Operations.SingleOrDefaultAsync(t =>
                     t.Id == operationId && t.TankId == tankId &&
-                    t.FuelId == fuelId && t.Inc_Exp== inc_Exp && t.OperationDate==operationDate));
+                    t.FuelId == fuelId && t.Inc_Exp == inc_Exp && t.OperationDate == operationDate));
         }
     }
 }

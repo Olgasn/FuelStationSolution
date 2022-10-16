@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using FuelStation.Application.Interfaces;
 using FuelStation.Application.Common.Mappings;
+using FuelStation.Application.Interfaces;
 using FuelStation.Persistence;
 
 namespace FuelStation.Tests.Common

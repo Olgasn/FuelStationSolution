@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using FuelStation.Application.Queries.GetList;
-using FuelStation.Application.Queries.GetDetails;
 using FuelStation.Application.Commands.CreateOperation;
-using FuelStation.Application.Commands.UpdateOperation;
 using FuelStation.Application.Commands.DeleteOperation;
+using FuelStation.Application.Commands.UpdateOperation;
+using FuelStation.Application.Queries.GetDetails;
+using FuelStation.Application.Queries.GetList;
 using FuelStation.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FuelStation.Web.Controllers
 {
@@ -42,7 +42,7 @@ namespace FuelStation.Web.Controllers
             var query = new GetOperationListQuery
             {
                 TankType = ContainTankType,
-                FuelType= ContainFuelType
+                FuelType = ContainFuelType
             };
             var vm = await Mediator.Send(query);
             return Ok(vm);

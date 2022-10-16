@@ -2,7 +2,7 @@
 
 namespace FuelStation.Application.Commands.UpdateTank
 {
-    public class UpdateTankCommand:IRequest
+    public class UpdateTankCommand : IRequest
     {
         //Код емкости
         public Guid Id { get; set; }
