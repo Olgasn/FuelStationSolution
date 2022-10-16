@@ -23,9 +23,9 @@ namespace FuelStation.Tests.Tanks.Commands
             }, CancellationToken.None);
 
             // Assert
-            Assert.NotNull(await Context.Tanks.SingleOrDefaultAsync(note =>
-                note.Id == FuelStationContextFactory.IdForUpdate &&
-                note.TankType == updatedTitle));
+            Assert.NotNull(await Context.Tanks.SingleOrDefaultAsync(tank =>
+                tank.Id == FuelStationContextFactory.IdForUpdate &&
+                tank.TankType == updatedTitle));
         }
 
         [Fact]
@@ -45,23 +45,6 @@ namespace FuelStation.Tests.Tanks.Commands
                     CancellationToken.None));
         }
 
-        [Fact]
-        public async Task UpdateTankCommandHandler_FailOnWrongUserId()
-        {
-            // Arrange
-            var handler = new UpdateTankCommandHandler(Context);
 
-            // Act
-            // Assert
-            await Assert.ThrowsAsync<NotFoundException>(async () =>
-            {
-                await handler.Handle(
-                    new UpdateTankCommand
-                    {
-                        Id = FuelStationContextFactory.IdForUpdate,
-                    },
-                    CancellationToken.None);
-            });
-        }
     }
 }

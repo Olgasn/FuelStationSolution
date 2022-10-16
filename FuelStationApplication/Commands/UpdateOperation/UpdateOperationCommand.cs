@@ -1,6 +1,8 @@
-﻿namespace FuelStation.Domain
+﻿using MediatR;
+
+namespace FuelStation.Application.Commands.UpdateOperation
 {
-    public class Operation
+    public class UpdateOperationCommand:IRequest
     {
         //Id операции
         public Guid Id { get; set; }
@@ -12,9 +14,8 @@
         public float? Inc_Exp { get; set; }
         //Дата операции
         public DateTime OperationDate { get; set; }
-        public Fuel Fuel { get; set; } = null!;
-        //ссылка на емкости
-        public Tank Tank { get; set; } = null!;
+
+
 
     }
 }

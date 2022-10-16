@@ -19,8 +19,8 @@ namespace FuelStation.Tests.Tanks.Commands
             }, CancellationToken.None);
 
             // Assert
-            Assert.Null(Context.Tanks.SingleOrDefault(note =>
-                note.Id == FuelStationContextFactory.IdForDelete));
+            Assert.Null(Context.Tanks.SingleOrDefault(tank =>
+                tank.Id == FuelStationContextFactory.IdForDelete));
         }
 
         [Fact]
