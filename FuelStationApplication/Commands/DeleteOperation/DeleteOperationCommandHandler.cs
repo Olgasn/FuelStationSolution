@@ -12,7 +12,7 @@ namespace FuelStation.Application.Commands.DeleteOperation
         public DeleteOperationCommandHandler(IFuelStationDbContext dbContext) =>
             _dbContext = dbContext;
 
-        public async Task<Unit> Handle(DeleteOperationCommand request,
+        public async Task Handle(DeleteOperationCommand request,
             CancellationToken cancellationToken)
         {
             var entity = await _dbContext.Operations
@@ -26,7 +26,7 @@ namespace FuelStation.Application.Commands.DeleteOperation
             _dbContext.Operations.Remove(entity);
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return Unit.Value;
+            return;
 
         }
     }

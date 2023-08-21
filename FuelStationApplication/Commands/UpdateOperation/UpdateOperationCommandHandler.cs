@@ -14,7 +14,7 @@ namespace FuelStation.Application.Commands.UpdateOperation
         public UpdateOperationCommandHandler(IFuelStationDbContext dbContext) =>
             _dbContext = dbContext;
 
-        public async Task<Unit> Handle(UpdateOperationCommand request,
+        public async Task Handle(UpdateOperationCommand request,
             CancellationToken cancellationToken)
         {
             var entity =
@@ -32,7 +32,7 @@ namespace FuelStation.Application.Commands.UpdateOperation
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 
-            return Unit.Value;
+            return;
         }
     }
 }
