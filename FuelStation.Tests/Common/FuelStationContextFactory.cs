@@ -92,7 +92,7 @@ namespace FuelStation.Tests.Common
             //Дополнительная запись для тестирование единичной выборки
             context.Fuels.Add(new Fuel
             {
-                FuelDensity = 2,
+                FuelDensity = 123,
                 Id = Guid.Parse("909F7C29-891B-4BE1-8504-21F84F262084"),
                 FuelType = "Title2"
             });

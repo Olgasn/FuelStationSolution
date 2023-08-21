@@ -19,9 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\CreateFuel\" />
-    <Folder Include="Commands\DeleteFuel\" />
-    <Folder Include="Commands\UpdateFuel\" />
     <Folder Include="Commands\CreateOperation\" />
     <Folder Include="Commands\DeleteOperation\" />
     <Folder Include="Commands\UpdateOperation\" />

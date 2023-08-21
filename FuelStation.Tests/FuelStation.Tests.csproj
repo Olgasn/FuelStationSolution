@@ -28,8 +28,4 @@
     <ProjectReference Include="..\FuelStationApplication\FuelStation.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Fuels\" />
-  </ItemGroup>
-
 </Project>
