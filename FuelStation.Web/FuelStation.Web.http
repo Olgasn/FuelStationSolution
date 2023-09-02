@@ -1,0 +1,13 @@
+﻿# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@FuelStation.Web_HostAddress = https://localhost:7239
+
+GET {{FuelStation.Web_HostAddress}}/api/operation/01963b89-7098-4dc2-8172-fac50aee5e2b
+Cache-Control: max-age=604800
+Age: 100
+
+###
+
+DELETE {{FuelStation.Web_HostAddress}}/api/operation/00b2f107-e335-4fe9-b6d8-7c94e8162154
+
+###

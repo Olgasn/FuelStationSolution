@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuelStation.Persistence", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuelStation.Web", "FuelStation.Web\FuelStation.Web.csproj", "{0B8F3CF4-F539-4FFB-8FF7-83201C9D14FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuelStation.Tests", "FuelStation.Tests\FuelStation.Tests.csproj", "{DF5A4499-55CC-4B41-9CB9-8805BA16A3A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuelStation.Tests", "FuelStation.Tests\FuelStation.Tests.csproj", "{DF5A4499-55CC-4B41-9CB9-8805BA16A3A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
