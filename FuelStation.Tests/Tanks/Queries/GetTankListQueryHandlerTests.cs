@@ -7,16 +7,10 @@ using Shouldly;
 namespace FuelStation.Tests.Tanks.Queries
 {
     [Collection("QueryCollection")]
-    public class GetTankListQueryHandlerTests
+    public class GetTankListQueryHandlerTests(QueryTestFixture fixture)
     {
-        private readonly FuelStationDbContext Context;
-        private readonly IMapper Mapper;
-
-        public GetTankListQueryHandlerTests(QueryTestFixture fixture)
-        {
-            Context = fixture.Context;
-            Mapper = fixture.Mapper;
-        }
+        private readonly FuelStationDbContext Context = fixture.Context;
+        private readonly IMapper Mapper = fixture.Mapper;
 
         [Fact]
         public async Task GetTankListQueryHandler_Success()

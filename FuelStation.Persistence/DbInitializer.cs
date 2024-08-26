@@ -29,8 +29,8 @@ namespace FuelStation.Persistence
             Random randObj = new(1);
 
             //Заполнение таблицы емкостей
-            string[] tank_voc = { "Цистерна_", "Ведро_", "Бак_", "Фляга_", "Цистерна_" };//словарь названий емкостей
-            string[] material_voc = { "Сталь", "Платина", "Алюминий", "ПЭТ", "Чугун", "Алюминий", "Сталь" };//словарь названий видов топлива
+            string[] tank_voc = ["Цистерна_", "Ведро_", "Бак_", "Фляга_", "Цистерна_"];//словарь названий емкостей
+            string[] material_voc = ["Сталь", "Платина", "Алюминий", "ПЭТ", "Чугун", "Алюминий", "Сталь"];//словарь названий видов топлива
             int count_tank_voc = tank_voc.GetLength(0);
             int count_material_voc = material_voc.GetLength(0);
             for (int tankId = 1; tankId <= tanks_number; tankId++)
@@ -46,7 +46,7 @@ namespace FuelStation.Persistence
             context.SaveChanges();
 
             //Заполнение таблицы видов топлива
-            string[] fuel_voc = { "Нефть_", "Бензин_", "Керосин_", "Мазут_", "Спирт_" };
+            string[] fuel_voc = ["Нефть_", "Бензин_", "Керосин_", "Мазут_", "Спирт_"];
             int count_fuel_voc = fuel_voc.GetLength(0);
             for (int fuelId = 1; fuelId <= fuels_number; fuelId++)
             {

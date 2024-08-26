@@ -32,8 +32,8 @@ namespace FuelStation.Tests.Common
             Random randObj = new(1);
 
             //Заполнение таблицы емкостей
-            string[] tankDictionary = { "Цистерна_", "Ведро_", "Бак_", "Фляга_", "Цистерна_" };//словарь названий емкостей
-            string[] materialDictionary = { "Сталь", "Платина", "Алюминий", "ПЭТ", "Чугун", "Алюминий", "Сталь" };//словарь названий видов топлива
+            string[] tankDictionary = ["Цистерна_", "Ведро_", "Бак_", "Фляга_", "Цистерна_"];//словарь названий емкостей
+            string[] materialDictionary = ["Сталь", "Платина", "Алюминий", "ПЭТ", "Чугун", "Алюминий", "Сталь"];//словарь названий видов топлива
             int count_tankDictionary = tankDictionary.GetLength(0);
             int count_materialDictionary = materialDictionary.GetLength(0);
             for (int tankId = 1; tankId <= tanksNumber - 1; tankId++)
@@ -70,7 +70,7 @@ namespace FuelStation.Tests.Common
             context.SaveChanges();
 
             //Заполнение таблицы видов топлива
-            string[] fuelDictionary = { "Нефть_", "Бензин_", "Керосин_", "Мазут_", "Спирт_" };
+            string[] fuelDictionary = ["Нефть_", "Бензин_", "Керосин_", "Мазут_", "Спирт_"];
             int count_fuelDictionary = fuelDictionary.GetLength(0);
             for (int fuelId = 1; fuelId <= fuelsNumber - 1; fuelId++)
             {

@@ -10,7 +10,7 @@ namespace FuelStation.Persistence
         public static IServiceCollection AddPersistence(this IServiceCollection
             services, IConfiguration configuration)
         {
-            string connectionString = configuration["DbConnection"];
+            string connectionString = configuration["DbConnection"] ?? "";
             services.AddDbContext<FuelStationDbContext>(options =>
             {
                 options.UseSqlite(connectionString);
