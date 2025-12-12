@@ -23,14 +23,12 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
-        cache: true          # Включает кэширование nuget пакетов
-        cache-dependency-path: '**/packages.lock.json' # Опционально: если используете lock-файлы, иначе можно убрать эту строку
+        # Убрали cache: true и cache-dependency-path, так как нет lock.json файлов
 
     - name: Install dependencies
       run: dotnet restore
 
     - name: Build
-      # Добавил явное указание конфигурации
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
