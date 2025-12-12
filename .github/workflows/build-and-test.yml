@@ -2,19 +2,16 @@ name: build and test
 
 on:
   push:
+    branches: [ main ] # 
   pull_request:
     branches: [ main ]
-    paths:
-    - '**.cs'
-    - '**.csproj'
 
 env:
-  DOTNET_VERSION: '10.0' # The .NET SDK version to use
+  DOTNET_VERSION: '10.0' 
 
 jobs:
   build-and-test:
-
-    name: build-and-test-${{matrix.os}}
+    name: build-and-test-${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -22,16 +19,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+        cache: true          # Включает кэширование nuget пакетов
+        cache-dependency-path: '**/packages.lock.json' # Опционально: если используете lock-файлы, иначе можно убрать эту строку
 
     - name: Install dependencies
       run: dotnet restore
-      
+
     - name: Build
+      # Добавил явное указание конфигурации
       run: dotnet build --configuration Release --no-restore
-    
+
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --configuration Release --no-build --verbosity normal
